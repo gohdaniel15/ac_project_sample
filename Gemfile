@@ -51,9 +51,6 @@ end
 group :test do
   # RSpec for Rails 3+
   gem 'rspec-rails'
-
-
-  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
