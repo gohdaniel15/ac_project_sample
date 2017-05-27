@@ -1,0 +1,9 @@
+dependencies:
+  pre:
+    - gem install bundler
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: ac_project_sample
