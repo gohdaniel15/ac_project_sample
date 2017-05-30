@@ -19,13 +19,13 @@ This app is an app for AC students to practice writing documentation and model s
   bundle install
   ```
 
-4. Setup Database
+3. Setup Database
 
   ```bash
   rake db:create db:migrate
   ```
 
-5. Start the application
+4. Start the application
 
   ```bash
   # Start the web server
@@ -34,7 +34,7 @@ This app is an app for AC students to practice writing documentation and model s
 
 ## Testing
 
-We use [Rspec](https://github.com/rspec/rspec-rails) as our tetsing framework. So, during development, run these regularly.
+We use [Rspec](https://github.com/rspec/rspec-rails) as our testing framework. So, during development, run these regularly.
 
 ```bash
 # Run the specs
