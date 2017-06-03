@@ -1,0 +1,11 @@
+<%= simple_form_for @job_listing, url: job_listings_path, method: :post, remote: true, html: { id: 'job_listing_form' } do |form| %>
+
+  <%= form.error_notification %>
+
+  <%= form.input :position %>
+  <%= form.input :salary %>
+  <%= form.input :description %>
+
+  <%= form.submit 'Save', class: 'btn btn-primary' %>
+
+<% end %>

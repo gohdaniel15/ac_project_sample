@@ -16,11 +16,17 @@ class JobListingsController < ApplicationController
   end
 
   def create
+    @job_listings = JobListing.all
     @job_listing = current_user.job_listings.build(job_listing_params)
-    if @job_listing.save
-      redirect_to job_listings_path
-    else
-      render :new
+
+    respond_to do |format|
+      if @job_listing.save
+        format.html { redirect_to job_listings_path }
+        format.js
+      else
+        format.html { render :new }
+        format.js
+      end
     end
   end
 

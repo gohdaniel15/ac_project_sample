@@ -4,15 +4,11 @@
 
     <div class='col-xs-12'>
 
-      <%= simple_form_for @job_listing, url: job_listings_path, method: :post do |form| %>
+      <div id='job_listings_form_container'>
 
-        <%= form.input :position %>
-        <%= form.input :salary %>
-        <%= form.input :description %>
+        <%= render partial: 'job_listings_form' %>
 
-        <%= form.submit 'Save', class: 'btn btn-primary' %>
-
-      <% end %>
+      </div>
 
     </div>
 
@@ -22,7 +18,11 @@
 
     <div class='col-xs-12'>
 
-      <%= render partial: 'job_listings' %>
+      <div id='job_listings_table'>
+
+        <%= render partial: 'job_listings' %>
+
+      </div>
 
     </div>
 
