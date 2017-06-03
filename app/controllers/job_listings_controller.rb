@@ -1,7 +1,10 @@
 class JobListingsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @job_listings = JobListing.all
+    @job_listing = JobListing.new
   end
 
   def show
