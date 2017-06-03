@@ -1,0 +1,23 @@
+<table class='table table-striped'>
+
+  <thead>
+    <th></th>
+    <th>Position</th>
+    <th>Salary</th>
+    <th>Description</th>
+  </thead>
+
+  <tbody>
+    <%- @job_listings.each.with_index(1) do |job_listing, index| %>
+
+      <tr>
+        <td><%= index %></td>
+        <td><%= job_listing.position %></td>
+        <td><%= job_listing.salary %></td>
+        <td><%= job_listing.description %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+
+</table>
