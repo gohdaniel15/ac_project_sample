@@ -5,8 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.3'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
@@ -15,6 +13,12 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Front end framework
+gem 'bootstrap-sass', '~> 3.3.6'
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+gem 'simple_form'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Flexible authentication solution for Rails with Warden.
@@ -48,8 +52,12 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing'
   # RSpec for Rails 3+
   gem 'rspec-rails'
+  # Collection of testing matchers extracted from Shoulda
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

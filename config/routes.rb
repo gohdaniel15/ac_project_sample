@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :job_listings
+
+  resources :penguin
+
 end
