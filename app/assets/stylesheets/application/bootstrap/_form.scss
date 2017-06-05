@@ -1,0 +1,14 @@
+input.form-control {
+  border: 0;
+  border-bottom: 1px solid #999;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+    border-bottom: 1px solid black;
+  }
+}
+
+.has-error .form-control {
+  box-shadow: none !important;
+}

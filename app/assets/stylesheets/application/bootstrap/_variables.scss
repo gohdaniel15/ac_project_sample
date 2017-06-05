@@ -154,8 +154,8 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-bg:                 #477186 !default;
+$btn-primary-border:             #477186 !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -176,7 +176,7 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-base:         0 !default;
 $btn-border-radius-large:        $border-radius-large !default;
 $btn-border-radius-small:        $border-radius-small !default;
 
@@ -198,7 +198,7 @@ $input-border:                   #ccc !default;
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-$input-border-radius:            $border-radius-base !default;
+$input-border-radius:            none !default;
 //** Large `.form-control` border radius
 $input-border-radius-large:      $border-radius-large !default;
 //** Small `.form-control` border radius
@@ -211,7 +211,7 @@ $input-border-focus:             #66afe9 !default;
 $input-color-placeholder:        #999 !default;
 
 //** Default `.form-control` height
-$input-height-base:              80px !default;
+$input-height-base:              50px !default;
 //** Large `.form-control` height
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Small `.form-control` height

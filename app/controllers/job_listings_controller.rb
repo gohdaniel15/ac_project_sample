@@ -24,7 +24,7 @@ class JobListingsController < ApplicationController
         format.html { redirect_to job_listings_path }
         format.js
       else
-        format.html { render :new }
+        format.html { render :index }
         format.js
       end
     end
@@ -44,9 +44,14 @@ class JobListingsController < ApplicationController
   end
 
   def destroy
+    @job_listings = JobListing.all
     @job_listing = job_listing
     @job_listing.destroy
-    redirect_to job_listings_path
+
+    respond_to do |format|
+      format.html { redirect_to job_listings_path }
+      format.js
+    end
   end
 
   private

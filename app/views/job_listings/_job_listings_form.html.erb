@@ -1,11 +1,11 @@
-<%= simple_form_for @job_listing, url: job_listings_path, method: :post, remote: true, html: { id: 'job_listing_form' } do |form| %>
+<%= simple_form_for @job_listing, url: job_listings_path, remote: true, method: :post, html: { id: 'job_listing_form' } do |form| %>
 
   <%= form.error_notification %>
 
-  <%= form.input :position %>
-  <%= form.input :salary %>
-  <%= form.input :description %>
+  <%= form.input :position, label: false, placeholder: 'Position' %>
+  <%= form.input :salary, label: false, placeholder: 'Salary' %>
+  <%= form.input :description, label: false, placeholder: 'Description' %>
 
-  <%= form.submit 'Save', class: 'btn btn-primary' %>
+  <%= form.submit 'Save', class: 'btn btn-primary col-xs-8 col-xs-offset-2', data: { 'disable-with': "Saving..." } %>
 
 <% end %>
