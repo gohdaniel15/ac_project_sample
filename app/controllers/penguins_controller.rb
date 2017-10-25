@@ -21,26 +21,25 @@ class PenguinsController < ApplicationController
     end
   end
 
-#
-#   def edit
-#     @penguin = penguin
-#   end
-#
-#   def update
-#     @penguin = penguin
-#     if @penguin.update(penguin_params)
-#       redirect_to penguins_path
-#     else
-#       redirect_to penguins_path, flash[:error] = 'Failed to create penguin'
-#     end
-#   end
-#
-#   def destroy
-#     @penguin = penguin
-#     @penguin.destroy
-#     redirect_to penguins_path
-#   end
-#
+  def edit
+    @penguin = penguin
+  end
+
+  def update
+    @penguin = penguin
+    if @penguin.update(penguin_params)
+      redirect_to penguins_path
+    else
+      redirect_to penguins_path, flash[:error] = 'Failed to create penguin'
+    end
+  end
+
+  def destroy
+    @penguin = penguin
+    @penguin.destroy
+    redirect_to penguins_path
+  end
+
   private
 
   def penguin
