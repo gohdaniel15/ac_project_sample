@@ -19,14 +19,8 @@ class JobListingsController < ApplicationController
     @job_listings = JobListing.all
     @job_listing = current_user.job_listings.build(job_listing_params)
 
-    respond_to do |format|
-      if @job_listing.save
-        format.html { redirect_to job_listings_path }
-        format.js
-      else
-        format.html { render :index }
-        format.js
-      end
+    if @job_listing.save
+      @job_listing = JobListing.new
     end
   end
 

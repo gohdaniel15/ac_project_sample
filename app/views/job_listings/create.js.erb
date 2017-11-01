@@ -1,9 +1,5 @@
-if ("<%= @job_listing.id %>") {
-  $('#job_listings_table').html("<%= j render partial: 'job_listings', job_listings: @job_listings %>");
-  $('.form-group').removeClass('has-error');
-  $('.alert').remove();
-  $('.help-block').remove();
-  $('#job_listing_form')[0].reset();
-} else {
-  $('#job_listings_form_container').html("<%= j render partial: 'job_listings_form', job_listing: @job_listing %>");
+$('#job_listing_form').html("<%= j render partial: 'job_listings_form' %>");
+
+if("<%= @job_listing.errors.empty? %>") {
+  $('#job_listings_table').html("<%= j render partial: 'job_listings' %>");
 }
